@@ -7,17 +7,17 @@
 <body>
 <h1>Cars</h1>
 
-<table>
+<table border="1", cellpadding="20">
     <tr>
-        <th>model</th>
-        <th>color</th>
-        <th>series</th>
+        <th>Model</th>
+        <th>Color</th>
+        <th>Series</th>
     </tr>
 
     <tr th:each="car : ${cars}">
-        <td th:utext="${car.getModel()}"></td>
-        <td th:utext="${car.getColor()}"></td>
-        <td th:utext="${car.getSeries()}"></td>
+        <th th:utext="${car.getModel}"/>
+        <td align="center", th:utext="${car.getColor()}"/>
+        <td align="center", th:utext="${car.getSeries()}"/>
     </tr>
 
 </table>
