@@ -19,7 +19,7 @@ public class CarsController {
 
     @GetMapping("/cars")
     public String getCars(@RequestParam(value = "count", defaultValue = "5") int number, ModelMap model){
-        if (number == 0){
+        if (number < 1 || number > 5){
             model.addAttribute("cars", carService.getCars());
         }else {
             model.addAttribute("cars", carService.getNumber(number));
