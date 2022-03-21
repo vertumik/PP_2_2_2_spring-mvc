@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Cars</title>
@@ -14,10 +14,10 @@
         <th>Series</th>
     </tr>
 
-    <tr th:each="car : ${cars}">
-        <th th:utext="${car.getModel}"/>
-        <td align="center", th:utext="${car.getColor()}"/>
-        <td align="center", th:utext="${car.getSeries()}"/>
+    <tr th:each="car : ${list}">
+        <th th:text="${car.getModel}">value</th>
+        <td align="center", th:text="${car.getColor()}">value</td>
+        <td align="center", th:text="${car.getSeries()}">value</td>
     </tr>
 
 </table>

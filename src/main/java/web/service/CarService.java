@@ -23,6 +23,10 @@ public class CarService {
     }
 
     public List<Car> getNumber(int number) {
-        return list.stream().limit(number).collect(Collectors.toList());
+        if (number < 1 || number > 5){
+            return list;
+        }else {
+            return list.stream().limit(number).collect(Collectors.toList());
+        }
     }
 }
